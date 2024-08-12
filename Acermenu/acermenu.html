@@ -2,40 +2,30 @@
 <html>
 <head>
     <title>GMP - AcerMenu</title>
-    <metaname="og:title" content="GMP - AcerMenu">
+    <meta name="og:title" content="GMP - AcerMenu">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-
+    <script>
+        // Check if the user is logged in
+        if (sessionStorage.getItem("loggedIn") !== "true") {
+            alert("You must be logged in to access this page.");
+            window.location.href = "/index.html"; // Redirect to login page
+        }
+    </script>
 
     <div class="topnav" id="myTopnav">
-<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-<a href="/index.html" target="_blank">Home</a>
-<a href="https://github.com/GMDPLUTONIC" target="_blank">GITHUB</a>
-<a href="/store/store.html" target="_blank">Store</a>
-<a href="/Acermenu/acermenu.html">AcerMenu</a>
-<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"><::before>/<::before></i>
-          </a>
-</div>
+        <a href="/index.html" target="_blank">Home</a>
+        <a href="https://github.com/GMDPLUTONIC" target="_blank">GITHUB</a>
+        <a href="/store/store.html" target="_blank">Store</a>
+        <a href="/Acermenu/acermenu.html">AcerMenu</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
 
-<script>
-function myFunction() {
-var x = document.getElementById("myTopnav");
-if (x.className === "topnav") {
-x.className += " responsive";
-} else {
-x.className = "topnav";
-}
-}
-</script>
-
-
-
-<div class="smain">
-        <h2>AcerMenu Showcase<h2>
-        
-
+    <div class="smain">
+        <h2>AcerMenu Showcase</h2>
         <div class="videoWrapperOuter">
             <div class="videoWrapperInner">
                 <iframe width="600" height="340" src="https://www.youtube.com/embed/hHgjkixmLSk?si=eTyLTcCscyFjnPjQ" frameborder="0" allowfullscreen=""></iframe>
@@ -44,34 +34,56 @@ x.className = "topnav";
 
         <h2>Feature Spotlight</h2>
         <ul>
-            <li><b>Geode Support</b> - AcerMenu has Geode support meaning you can download other really useful mods or mods that have features that AcerMenu doesnt have (e.g. Grandpa Demon)</li>
+            <li><b>Geode Support</b> - AcerMenu has Geode support meaning you can download other really useful mods or mods that have features that AcerMenu doesn't have (e.g. Grandpa Demon)</li>
             <li><b>Auto-Saving</b> - Hacks will be saved even after you close Geometry Dash so you can carry on where you left off</li>
             <li><b>AcerBot</b> - You can use this to record and replay macros. Only meant for showcasing and not for any hacking attempts like Spaceuk</li>
             <li><b>StartPos Switcher</b> - Switch between start positions with your Q and E keys (on android and ios press the buttons), no more dozen copies per level for practicing</li>
-            <li><b>Internal Recorder</b> - AcerMenu comes with a Built-In Internal Recorder so you can record your levels to showcase them on youtube and if it doesnt work dont worry because it has obs in the mods resources folder</li>
+            <li><b>Internal Recorder</b> - AcerMenu comes with a Built-In Internal Recorder so you can record your levels to showcase them on YouTube and if it doesn't work don't worry because it has OBS in the mods resources folder</li>
         </ul>
         
         <hr>
 
-        <p><b>Supports: Windows, Mac (you need to play through wine), Ios (jailbreak needed), and Android, Geometry Dash 2.206 (<a href="https://geode-sdk.org" target="_blank">Geode </a>)</b></p>
+        <p><b>Supports: Windows, Mac (you need to play through wine), iOS (jailbreak needed), and Android, Geometry Dash 2.206 (<a href="https://geode-sdk.org" target="_blank">Geode</a>)</b></p>
         
         <hr>
         
-        <a href="https://search.brave.com/search?q=not+yet&source=desktop"><Download<br>(Free)</a></div>
+        <a href="https://search.brave.com/search?q=not+yet&source=desktop">Download<br>(Free)</a>
+    </div>
 
-        <div class="footer">
-            <div class="smain"><hr></div>
-            <div class="footerd">
+    <div class="footer">
+        <div class="smain"><hr></div>
+        <div class="footerd">
             <h2>Contact</h2>
-            <p>Email: <a href="mailto:gmdplutonic37@gmail.com">gmdplutonic37@gmail.com</a>
+            <p>Email: <a href="mailto:gmdplutonic37@gmail.com">gmdplutonic37@gmail.com</a></p>
             <p>GitHub: <a href="https://github.com/GMDPLUTONIC" target="_blank">@GMDPLUTONIC</a> Discord: thatkideligd <a href="https://discord.gg/agMrcTkm9M">Discord Server</a></p>
             <p><a href="/privacy/privacy.html" target="_blank">Privacy Policy</a></p>
-            </div>
-            <div class="footerd">
+        </div>
+        <div class="footerd">
             <p style="color: #aaa">© GMDPLUTONIC's Mods Ltd 2024</p>
-            </div>
-            </div>
-            
+        </div>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+
+<button onclick="logout()">Logout</button>
+<script>
+function logout() {
+    sessionStorage.removeItem("loggedIn");
+    localStorage.removeItem("loggedIn");
+    window.location.href = "/index.html"; // Redirect to login page
+}
+</script>
+
 </body>
 
 </html>

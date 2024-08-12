@@ -54,23 +54,64 @@ x.className = "topnav";
 
     <h2>How do i use AcerMenu?</h2>
 
-    <p>Press the "TAB" Key to open AcerMenu now just click whatever feature you want to use!</p>
+    <p>Press the <span class="kbd">Tab</span> Key to open AcerMenu now just click whatever feature you want to use!</p>
 
 
+    <div class="smain"><hr></div>
 <h2>Feature Spotlight</h2>
 <ul>
     <li><b>Geode Support</b> - AcerMenu has Geode support meaning you can download other really useful mods or mods that have features that AcerMenu doesnt have (e.g. Grandpa Demon)</li>
     <li><b>Auto-Saving</b> - Hacks will be saved even after you close Geometry Dash so you can carry on where you left off</li>
-    <li><b>AcerBot</b> - You can use this to record and replay macros. Only meant for showcasing and not for any hacking attempts like Spaceuk</li>
+    <li><b><abbr title="AcerBotRepley">ABR</abbr></b> - You can use this to record and replay macros. Only meant for showcasing and not for any hacking attempts like Spaceuk</li>
     <li><b>StartPos Switcher</b> - Switch between start positions with your Q and E keys (on android and ios press the buttons), no more dozen copies per level for practicing</li>
     <li><b>Internal Recorder</b> - AcerMenu comes with a Built-In Internal Recorder so you can record your levels to showcase them on youtube and if it doesnt work dont worry because it has obs in the mods resources folder</li>
 </ul>
 
 <hr>
 
+
+<div class="smain">
+<h1>Platforms</h1>
+
 <p><b>Supports: Windows, Mac (you need to play through wine), Ios (jailbreak needed), and Android, Geometry Dash 2.206 (<a href="https://geode-sdk.org" target="_blank">Geode </a>)</b></p>
 
 </div>
+</div>
+
+<dialog>
+<div class="smain"><hr>
+    <h1>How much AcerMenu is done</h1>
+
+    <meter min="0" max="100" low="25" high="50" optimum="75" value="85"></meter>
+    <strong><code>75%</code></strong>
+</dialog>
+</div>
+<div class="smain">
+<button onclick="openMe">See Progress on the release/updates</button>
+
+</div>
+<script>
+
+    function openMe(){
+    document.querySelector('dialog').showModal()
+
+    }
+    </script>
+
+</div>
+    
+<div class="footer">
+    <div class="smain"><hr></div>
+    <div class="footerd">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:gmdplutonic37@gmail.com">gmdplutonic37@gmail.com</a>
+        <p>GitHub: <a href="https://github.com/GMDPLUTONIC" target="_blank">@GMDPLUTONIC</a> Discord: thatkideligd <a href="https://discord.gg/agMrcTkm9M">Discord Server</a></p>
+        <p><a href="/privacy/privacy.html" target="_blank">Privacy Policy</a></p>
+        <p>i dont really want people to gift me things but if you do donate me i will still apreciate it!</p>
+    </div>
+    <div class="footerd">
+        <p style="color: #aaa">© GMDPLUTONIC's Mods Ltd 2024</p>
+    </div>
 
 
 <style>@import url('https://fonts.googleapis.com/css?family=Roboto');
@@ -83,7 +124,14 @@ x.className = "topnav";
         text-align: center;
         font-family: "Roboto";
     }
-    
+    .kbd {
+    padding: 0 8px;
+    color: var(--foreground);
+    background-color: var(--bg-accent);
+    border-radius: 8px;
+}
+
+
     .smain h1
     {
         line-height: 72px;
@@ -135,6 +183,33 @@ x.className = "topnav";
     }
     
     .smain a:active {
+        transform: translateY(2px);
+    }
+
+
+    .smain button
+    {
+        display: inline-block;
+        border-radius: 12px;
+        background-image: radial-gradient(100% 100% at 100% 0, #ff3f3f 0, #c93b3b 100%);
+        color: #ffffff;
+        font-size: 20px;
+        padding: 12px;
+        max-width: 256px;
+        cursor: pointer;
+        margin: 5px;
+        text-decoration: none;
+        transition: all .5s;
+    }
+
+    .smain button:hover
+    {
+        box-shadow: #aaa 0 1px 15px;
+        transform: translateY(-2px);
+        transition-duration: .1s;
+    }
+    
+    .smain button:active {
         transform: translateY(2px);
     }
     
