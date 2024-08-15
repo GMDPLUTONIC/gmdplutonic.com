@@ -24,13 +24,12 @@
         </select>
     </div>
 
-
     <div class="smain">
         <h2>Login</h2>
         <form id="loginForm" onsubmit="return validateForm()">
             <div class="input-container">
                 <label for="identifier">Username or Email</label>
-                <input type="text" id="identifier" name="identifier" placeholder="Username or Email" required>
+                <input type="text" id="username" name="username" placeholder="Username or Email" required>
             </div>
             <div class="input-container">
                 <label for="password">Password</label>
@@ -40,7 +39,49 @@
         </form>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        const translations = {
+            en: {
+                loginTitle: "Login",
+                usernameLabel: "Username or Email",
+                passwordLabel: "Password",
+                loginButton: "Login"
+            },
+            es: {
+                loginTitle: "Iniciar sesión",
+                usernameLabel: "Nombre de usuario o correo electrónico",
+                passwordLabel: "Contraseña",
+                loginButton: "Iniciar sesión"
+            },
+            fr: {
+                loginTitle: "Connexion",
+                usernameLabel: "Nom d'utilisateur ou email",
+                passwordLabel: "Mot de passe",
+                loginButton: "Connexion"
+            }
+            // Add more translations as needed
+        };
+
+        function setLanguage() {
+            const language = document.getElementById('language').value;
+            const translation = translations[language];
+
+            document.getElementById('login-title').textContent = translation.loginTitle;
+            document.getElementById('username-label').textContent = translation.usernameLabel;
+            document.getElementById('password-label').textContent = translation.passwordLabel;
+            document.getElementById('login-button').textContent = translation.loginButton;
+        }
+
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        </script>
 </body>
 </html>
 

@@ -40,10 +40,10 @@ function myFunction() {
 }
 
 function validateForm() {
-    var username = document.getElementById("username").value;
+    var identifier = document.getElementById("identifier").value;
     var password = document.getElementById("password").value;
 
-    if (username === "" || password === "") {
+    if (identifier === "" || password === "") {
         alert("Both fields are required.");
         return false;
     }
