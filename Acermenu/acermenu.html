@@ -6,13 +6,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <script>
-        // Check if the user is logged in
-        if (sessionStorage.getItem("loggedIn") !== "true") {
-            alert("You must be logged in to access this page.");
-            window.location.href = "/Acermenu/Login/login.html"; // Redirect to login page
-        }
-    </script>
 
     <div class="topnav" id="myTopnav">
         <a href="/index.html" target="_blank">Home</a>
@@ -21,8 +14,11 @@
         <a href="/Acermenu/acermenu.html">AcerMenu</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
-        </a>
-    </div>
+        <a class="active" href="acermenu.html">AcerMenu Section | Main Page</a>
+        <a href="/Acermenu/faq.html">FAQ</a>
+        <a href="changelog.html">CHANGELOG</a>
+      </div>
+      
 
     <div class="smain">
         <h2>AcerMenu Showcase</h2>
@@ -55,7 +51,7 @@
         <div class="footerd">
             <h2>Contact</h2>
             <p>Email: <a href="mailto:gmdplutonic37@gmail.com">gmdplutonic37@gmail.com</a></p>
-            <p>GitHub: <a href="https://github.com/GMDPLUTONIC" target="_blank">@GMDPLUTONIC</a> Discord: thatkideligd <a href="https://discord.gg/agMrcTkm9M">Discord Server</a></p>
+            <p>GitHub: <a href="https://github.com/GMDPLUTONIC" target="_blank">@GMDPLUTONIC</a> Discord: thatkideligd <a href="https://discord.gg/TnhJkJ6X">Discord Server</a></p>
             <p><a href="/privacy/privacy.html" target="_blank">Privacy Policy</a></p>
         </div>
         <div class="footerd">
@@ -74,15 +70,6 @@
         }
     </script>
 
-
-<button onclick="logout()">Logout</button>
-<script>
-function logout() {
-    sessionStorage.removeItem("loggedIn");
-    localStorage.removeItem("loggedIn");
-    window.location.href = "/index.html"; // Redirect to login page
-}
-</script>
 
 </body>
 
